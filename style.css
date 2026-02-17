@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d1117; /* dark rich */
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  color: #f0f6fc; /* bright off-white */
+  font-size: 4vmin;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3); /* subtle glow */
+  transition: transform 1s ease-in-out; /* smooth rotation */
+  display: inline-block; /* important for rotation */
+}
+
+/* Full 360 rotation on hover */
+h1:hover {
+  transform: rotate(360deg);
+}
+
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+  background: #161b22; /* board dark */
+  padding: 1vmin;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0.05), 0 0 1rem rgba(0,0,0,0.3);
+  font-size: 8vmin;
+  color: #f0f6fc; /* neutral text default */
+  background-color: #21262d; /* subtle tile color */
+  transition: background 0.2s, color 0.2s;
+}
+
+.box:hover {
+  background-color: #2a333f;
+}
+
+#reset-btn,
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #238636; /* rich green */
+  color: #f0f6fc;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #2ea043;
+}
+
+#msg {
+  color: #f0f6fc;
+  font-size: 5vmin;
+  font-weight: bold;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  background: rgba(13, 17, 23, 0.95);
+}
+
+.hide {
+  display: none;
+}
+
+/* Neon colors for players */
+.Oprop {
+  color: #ff6a3d; /* vibrant neon orange */
+}
+
+.Xprop {
+  color: #4fd1ff; /* vibrant neon cyan */
+}
+
+
+.developer-credit {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6a3d; /* base fire orange */
+  text-shadow:
+    0 0 5px #ff6a3d,
+    0 0 10px #ff6a3d,
+    0 0 20px #ff3d00;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fire glow effect on hover, text stays stable */
+.developer-credit:hover {
+  text-shadow:
+    0 0 10px #ff9a3d,
+    0 0 20px #ff6a3d,
+    0 0 30px #ff3d00,
+    0 0 40px #ff1a00,
+    0 0 50px #ff0000;
+  color: #ff9a3d;
+}
